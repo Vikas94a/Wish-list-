@@ -1,6 +1,6 @@
 import kidsWishlist from "./WishList";
 import styled from "styled-components";
-import { gsap } from "gsap";
+import Red_Christmas from "./assets/Red_Christmas.jpg";
 
 const Container = styled.div`
   height: 100%;
@@ -14,15 +14,13 @@ const Container = styled.div`
 const Child = styled.div`
   display: flex;
   flex-direction: column;
-  background: ${(props) =>
-    props.isNaughty
-      ? "linear-gradient(135deg, #81c784, #aed581)"
-      : "linear-gradient(135deg, #e3f2fd, #ffffff)"};
+  background-image: url(src/assets/Red_Christmas.jpg);
+  background-size: cover;
   position: relative;
   color: white;
   margin: 5px;
   padding: 12px;
-  width: 30%;
+  min-width: 45%;
   height: 310px;
   gap: 20px;
   justify-content: center;
@@ -35,9 +33,6 @@ const Child = styled.div`
 `;
 
 const Snow = styled.div`
-  height: 20px;
-  width: 80%;
-  background-color: #2786de;
   position: absolute;
   top: 0;
   overflow: hidden;
@@ -45,12 +40,12 @@ const Snow = styled.div`
 
 const Rain = styled.div`
   height: 20px;
-  width: 80%;
+  width: 40%;
   background-color: #37374d;
   position: absolute;
   top: 0;
   overflow: hidden;
-  animation: rain 1s linear infinite;
+  animation: rain 3s linear infinite;
 
   @keyframes rain {
     0% {
@@ -75,17 +70,21 @@ export default function WishListCard() {
     <Container>
       {kidsWishlist.map((list) => (
         <Child key={list.id}>
-          <p style={{ color: "black" }}>Name:-{list.name}</p>
-          <p style={{ color: "black" }}>Age:-{list.age}</p>
-          <h2 style={{ paddingTop: "2px", color: "red" }}>Wish list</h2>
+          <p style={{ color: "black", fontSize: "1rem", fontWeight: "800" }}>
+            Name:-{list.name}
+          </p>
+          <p style={{ color: "black", fontSize: "1rem", fontWeight: "800" }}>
+            Age:-{list.age}
+          </p>
+          <h2 style={{ paddingTop: "2px", color: "Yellow" }}>Wish list</h2>
           <ul>
             {list.wishlist.map((e, i) => (
               <li
                 style={{
-                  color: "green",
+                  color: "White",
                   marginBottom: "5px",
-                  fontSize: "0.9rem",
-                  fontWeight: "bold",
+                  fontSize: "0.9em",
+                  fontWeight: "400",
                 }}
                 key={i}
               >

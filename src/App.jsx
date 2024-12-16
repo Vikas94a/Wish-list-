@@ -57,7 +57,8 @@ function App() {
         <h1 style={{ color: "black", alignItems: "center" }}>Wish list</h1>
       </Container>
       <WishListCard />
-      <MotionMouse className="Mouse"  variants={variants} animate="default" />
+
+      <MotionMouse className="Mouse" variants={variants} animate="default" />
     </>
   );
 }
