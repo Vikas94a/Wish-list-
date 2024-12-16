@@ -1,6 +1,6 @@
 import kidsWishlist from "./WishList";
 import styled from "styled-components";
-import Red_Christmas from "./assets/Red_Christmas.jpg";
+import Snowfall from "react-snowfall";
 
 const Container = styled.div`
   height: 100%;
@@ -33,34 +33,47 @@ const Child = styled.div`
 `;
 
 const Snow = styled.div`
-  position: absolute;
-  top: 0;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 `;
 
 const Rain = styled.div`
   height: 20px;
-  width: 40%;
+  width: 20%;
   background-color: #37374d;
   position: absolute;
   top: 0;
   overflow: hidden;
   animation: rain 3s linear infinite;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 
   @keyframes rain {
     0% {
-      background-color: #37374d;
+      background-color: white;
       top: 0%;
     }
     50% {
-      background-color: red;
+      background-color: yellow;
       top: 50%;
+      left: 50%;
       transform: rotate(90deg);
     }
     100% {
       background-color: green;
       top: 100%;
       transform: rotate(180deg);
+      left: 20%;
     }
   }
 `;
@@ -92,7 +105,13 @@ export default function WishListCard() {
               </li>
             ))}
           </ul>
-          {list.naughty ? <Rain></Rain> : <Snow></Snow>}
+          {list.naughty ? (
+            <Rain></Rain>
+          ) : (
+            <Snow>
+              <Snowfall />
+            </Snow>
+          )}
         </Child>
       ))}
     </Container>
