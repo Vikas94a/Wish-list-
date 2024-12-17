@@ -16,9 +16,9 @@ const MotionMouse = motion.create(styled.div`
   top: 0;
   left: 0;
   position: fixed;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border-radius: 40%;
 `);
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
       </Container>
       <WishListCard />
 
-      <MotionMouse className="Mouse"  variants={variants} animate="default" />
+      <MotionMouse className="Mouse" variants={variants} animate="default" />
     </>
   );
 }

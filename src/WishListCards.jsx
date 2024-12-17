@@ -14,7 +14,7 @@ const Container = styled.div`
 const Child = styled.div`
   display: flex;
   flex-direction: column;
-  background-image: url(src/assets/Red_Christmas.jpg);
+  background-image: url(./src/assets/Red_Christmas.jpg);
   background-size: cover;
   position: relative;
   color: white;
@@ -98,6 +98,7 @@ export default function WishListCard() {
                   marginBottom: "5px",
                   fontSize: "0.9em",
                   fontWeight: "400",
+                  fontFamily: "Rubik",
                 }}
                 key={i}
               >
