@@ -2,7 +2,7 @@
   "name": "christmas",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Vikas94a/Wish-list-.git",
+  "homepage": "https://github.io/Vikas94a/Wish-list-.git",
   "type": "module",
   "scripts": {
     "dev": "vite",

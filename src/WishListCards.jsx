@@ -28,7 +28,7 @@ const Child = styled.div`
   border-radius: 15px;
   &:hover {
     transform: scale(1);
-    border: 2px solid black;
+    border: 4px solid yellow;
   }
 `;
 

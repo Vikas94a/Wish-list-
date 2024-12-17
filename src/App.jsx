@@ -58,7 +58,7 @@ function App() {
       </Container>
       <WishListCard />
 
-      <MotionMouse className="Mouse" variants={variants} animate="default" />
+      <MotionMouse className="Mouse"  variants={variants} animate="default" />
     </>
   );
 }
