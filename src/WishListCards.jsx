@@ -14,7 +14,8 @@ const Container = styled.div`
 const Child = styled.div`
   display: flex;
   flex-direction: column;
-  background-image: url(./src/assets/Red_Christmas.jpg);
+  background-image: url("./assets/Red_Christmas.jpg");
+
   background-size: cover;
   position: relative;
   color: white;
